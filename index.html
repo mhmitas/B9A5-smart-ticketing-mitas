@@ -1,11 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-Theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>mitas-Ticket</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: "Raleway", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            /* .raleway */
+            max-width: 1440px;
+        }
+    </style>
 </head>
-<body>
-    
+
+<body class="container mx-auto">
+    <header class="lg:mx-32 border-2">
+        <nav class="my-3">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <!-- lg:hidden -->
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destinetion</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-2xl font-bold"><span class="uppercase">mitas</span>-Ticket</a>
+                </div>
+                <!-- hidden in small -->
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 *:font-semibold">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destinetion</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn font-bold">Bus <img src="images/bus-icon.png" alt=""></a>
+                </div>
+            </div>
+        </nav>
+        <!--  banner section  -->
+        <section>
+            <div class="hero h-[550px] bg-cover rounded-3xl" style="background-image: url('images/banner.png');">
+                <!-- images\banner.png -->
+                <div class=""></div>
+                <div class="hero-content text-center text-neutral-content">
+                    <div class="max-w-md">
+                        <h1 class="mb-5 text-5xl font-bold text-white">End-to-End Travel with</h1>
+                        <h1 class="mb-5 text-4xl font-bold">MITAS Paribahan</h1>
+                        <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
+                            exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                        <button class="btn btn-primary green">Buy Ticket</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main class="mt-28 lg:mx-32 border-2">
+        <!-- Best offers for you section -->
+        <section class="space-y-10">
+            <h3 class="font-bold text-4xl text-center">Best offers for you</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                <div class=" bg-cover w-full  bg-no-repeat rounded-3xl"
+                    style="background-image: url('images/Rectangle-orenge.png');">
+                    <div class="flex justify-around items-center px-2">
+                        <div class="">
+                            <p class="font-bold text-4xl">15% OFF</p>
+                            <p class="text-xl font-bold">on your next purchase</p>
+                            <p>use by January 2024</p>
+                        </div>
+                        <div><img src="images/cupon-devider.png" alt=""></div>
+                        <div>
+                            <p class="font-bold text-3xl">NEW15</p>
+                            <p class="text-xl font-bold">Coupon Code</p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" bg-cover w-full  bg-no-repeat rounded-3xl"
+                    style="background-image: url('images/Rectangle-pink.png');">
+                    <div class="flex justify-around items-center px-2">
+                        <div>
+                            <p class="font-bold text-4xl">20% OFF</p>
+                            <p class="text-xl font-bold">on your next purchase</p>
+                            <p>use by January 2024</p>
+                        </div>
+                        <div><img src="images/cupon-devider.png" alt=""></div>
+                        <div>
+                            <p class="font-bold text-3xl">Couple 20</p>
+                            <p class="text-xl font-bold">Coupon Code</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center"><button class="btn btn-outline btn-success">See All Offers</button></div>
+        </section>
+    </main>
+    <footer class="footer footer-center p-10 bg-[#030712] text-base-content rounded text-white">
+        <nav class="">
+            <h3 class="font-bold text-4xl text-center">MITAS-tickets</h3>
+            <div>P-Ticket is a digital platform to make your daily commuting better.</div>
+        </nav>
+        <nav>
+            <img src="images/playstore2.png" alt="">
+        </nav>
+        <aside>
+            <p>Copyright © 2024 - All right reserved by MITAS-tickets Ltd</p>
+        </aside>
+    </footer>
 </body>
+
 </html>
