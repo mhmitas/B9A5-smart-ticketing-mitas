@@ -33,4 +33,11 @@
 
 hr {
     border-top: 1px dotted #560101;
-  }
+}
+
+
+/* selected-seat-container styles */
+#selected-seat-container div {
+    display: flex;
+    justify-content: space-between;
+}
