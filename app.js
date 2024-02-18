@@ -3,8 +3,8 @@ for (const seatbtn of seatBtns) {
     seatbtn.addEventListener('click', function (e) {
         
         // set bg of clicked btn
-        const bg = e.target.style.backgroundColor = '#2eb82e'
-        const color = e.target.style.color = '#ffffff'
+        const bg = e.target.style.backgroundColor = '#2eb82e';
+        const color = e.target.style.color = '#ffffff';
 
         const seat = getInnerValue('seat')
         const updatedSeat = seat + 1;
