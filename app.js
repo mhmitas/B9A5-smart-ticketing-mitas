@@ -3,9 +3,16 @@ const seatBtns = document.getElementsByClassName('seat-num')
 for (const seatbtn of seatBtns) {
     seatbtn.addEventListener('click', function (e) {
 
+        //stops the execution of a function
+        if (getInnerValue('seat') === 4) {
+            alert('You cannot select mare than 4 tickets')
+            return;
+        }
+
         // set bg of clicked btn
-        const bg = e.target.style.backgroundColor = '#2eb82e';
-        const color = e.target.style.color = '#ffffff';
+        e.target.style.backgroundColor = '#2eb82e';
+        e.target.style.color = '#ffffff';
+        e.target.disabled = true;
 
         // update seat quantity
         const seat = getInnerValue('seat')
@@ -16,15 +23,19 @@ for (const seatbtn of seatBtns) {
         const updatedSeatsLeft = seatsLeft - 1;
         setInnerValue('seats-left', updatedSeatsLeft)
 
-        
+
         // send seat data to total container 
         const btnTxt = e.target.innerText;
         sendDataToSeatContainer(btnTxt)
 
-        // makeTotal
+        // make Total
+        const ticketPrice = getInnerValue('ticket-price')
+        makeTotal(ticketPrice)
 
     })
 }
+
+
 
 
 // --Utility--
@@ -44,11 +55,20 @@ function sendDataToSeatContainer(text) {
     // seat-price-container
     const seatPriceContainer = document.getElementById('seat-price-container')
     const seatPrice = document.createElement('div')
-    const ticketPrice = getInnerValue('ticket-price')
-    console.log(ticketPrice)
     seatPrice.innerText = getInnerValue('ticket-price');
     seatPriceContainer.appendChild(seatPrice)
 }
+
+
+function makeTotal(price) {
+    const total = getInnerValue('total-price')
+    const sum = total + price;
+    setInnerValue('total-price', sum)
+}
+
+
+
+// console.log(document.getElementById('phone-num').value)
 
 
 function getInnerValue(id) {
