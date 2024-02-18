@@ -3,6 +3,7 @@
     background-color: #2eb82e;
     color: black;
     border: none;
+    color: white;
 }
 
 .btn {
@@ -10,4 +11,26 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    min-width: 110px;
+    font-weight: bold
 }
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.bogura {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: rgb(220, 220, 220);
+}
+
+hr {
+    border-top: 1px dotted #560101;
+  }

@@ -23,14 +23,13 @@
             font-optical-sizing: auto;
             font-weight: 400;
             font-style: normal;
-            /* .raleway */
             max-width: 1440px;
         }
     </style>
 </head>
 
 <body class="container mx-auto">
-    <header class="lg:mx-32 border-2">
+    <header class="lg:mx-32">
         <nav class="my-3">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
@@ -84,9 +83,9 @@
             </div>
         </section>
     </header>
-    <main class="mt-28 lg:mx-32 border-2">
+    <main class="mt-28 lg:mx-32 ">
         <!-- Best offers for you section -->
-        <section class="space-y-10">
+        <section class="space-y-10 mb-36">
             <h3 class="font-bold text-4xl text-center">Best offers for you</h3>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
                 <div class=" bg-cover w-full  bg-no-repeat rounded-3xl"
@@ -122,102 +121,231 @@
             </div>
             <div class="text-center"><button class="btn btn-outline btn-success">See All Offers</button></div>
         </section>
-        <!-- Select Your Seat section-->
-        <section>
-            <!-- left side -->
-            <div class="flex">
-                <div id="left-column">
-                    <div class="btn-container">
-                        <p>A</p>
-                        <button class="seat-num btn">A1</button>
-                        <button class="seat-num btn">A2</button>
+        <section class="bg-[#F7F8F8] px-16 py-8 mb-10 rounded-xl">
+            <!-- Paribahan details -->
+            <div class="text-center space-y-3 mb-24">
+                <h3 class="font-bold text-4xl">MITAS Paribahan</h3>
+                <p>Yes, you can run unit tests and view the results directly within the app. <br>The integrated testing
+                    features
+                    allow for a streamlined .</p>
+            </div>
+            <!-- bogura box -->
+            <div class="flex  justify-between">
+                <div class="md:w-3/4 space-y-3">
+                    <!-- MITAS Paribahan -->
+                    <div class="flex justify-between">
+                        <div class="flex gap-4">
+                            <div class="">
+                                <img src="images/bus-logo.png" alt="">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">MITAS Paribahan</h3>
+                                <p>Coach-009-WEB ! AC_Business</p>
+                            </div>
+                        </div>
+                        <!-- Seats left -->
+                        <div class="bg-[#1DD10026] btn">
+                            <img src="images/seat-green.png" alt="">
+                            <span id="seats-left">40</span> Seats left
+                        </div>
                     </div>
-                    <div class="btn-container">
-                        <p>B</p>
-                        <button class="seat-num btn">B1</button>
-                        <button class="seat-num btn">B2</button>
-                    </div>
-                    <div class="btn-container">
-                        <p>C</p>
-                        <button class="seat-num btn">C1</button>
-                        <button class="seat-num btn">C2</button>
-                    </div>
-                    <div class="btn-container">
-                        <p>D</p>
-                        <button class="seat-num btn">D1</button>
-                        <button class="seat-num btn">D2</button>
-                    </div>
-                    <div class="btn-container">
-                        <p>E</p>
-                        <button class="seat-num btn">E1</button>
-                        <button class="seat-num btn">E2</button>
-                    </div>
-                    <div class="btn-container">
-                        <p>F</p>
-                        <button class="seat-num btn">F1</button>
-                        <button class="seat-num btn">F2</button>
-                    </div>
-                    <div class="btn-container">
-                        <p>G</p>
-                        <button class="seat-num btn">G1</button>
-                        <button class="seat-num btn">G2</button>
-                    </div>
-                    <div class="btn-container">
-                        <p>H</p>
-                        <button class="seat-num btn">H1</button>
-                        <button class="seat-num btn">H2</button>
-                    </div>
-                    <div class="btn-container">
-                        <p>I</p>
-                        <button class="seat-num btn">I1</button>
-                        <button class="seat-num btn">I2</button>
-                    </div>
-                    <div class="btn-container">
-                        <p>J</p>
-                        <button class="seat-num btn">J1</button>
-                        <button class="seat-num btn">J2</button>
+                    <!-- Boarding Point - Laxmipur -->
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <p>Route</p>
+                            <p class="font-bold">Dhaka - Sylhet</p>
+                        </div>
+                        <hr>
+                        <div class="flex justify-between">
+                            <p>Departure Time</p>
+                            <p class="font-bold">9:00 PM</p>
+                        </div>
+                        <hr>
+                        <div class="flex justify-between">
+                            <button class="bogura">Boarding Point - Laxmipur</button>
+                            <button class="bogura">Dropping Point - Bogura</button>
+                            <button class="bogura">Est. Time - 11 Hour</button>
+                        </div>
                     </div>
                 </div>
-                <div class="right-column">
-                    <div class="btn-container">
-                        <button class="seat-num btn">A3</button>
-                        <button class="seat-num btn">A4</button>
+                <div class="flex flex-col items-center justify-center space-y-3">
+                    <img src="images/fare.png" alt="">
+                    <h3 class="font-bold text-4xl">550 Taka</h3>
+                    <h3 class="text-xl font-bold">Per Seat</h3>
+                </div>
+            </div>
+        </section>
+        <!-- Select Your Seat section-->
+        <section class="bg-[#F7F8F8] py-8 rounded-xl">
+            <div class="flex flex-col-reverse md:flex-row mb-28">
+                <!-- left side -->
+                <div class=" w-full md:w-3/5 px-16">
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-bold">Select Your Seat</h3>
+                        <hr>
+                        <div class="flex justify-between">
+                            <div class="flex justify-between gap-2 font-extrabold"><img src="images/seat-gray.png"
+                                    alt=""><span>Available</span></div>
+                            <hr>
+                            <div class="flex justify-between gap-2 font-extrabold"><img
+                                    src="images/seat-green-filled.png" alt=""><span
+                                    class="text-[#2eb82e]">Selected</span></div>
+                        </div>
+                        <hr>
+                        <div class="flex justify-end">
+                            <button class="btn"><img src="images/wheel.png" alt=""></button>
+                        </div><br>
                     </div>
-                    <div class="btn-container">
-                        <button class="seat-num btn">B3</button>
-                        <button class="seat-num btn">B4</button>
+                    <div class="flex flex-col md:flex-row justify-between gap-4 bg-white p-5 rounded-xl">
+                        <!-- left-column of seat btns -->
+                        <div class="seat-column">
+                            <div class="btn-container">
+                                <p>A</p>
+                                <button class="seat-num btn">A1</button>
+                                <button class="seat-num btn">A2</button>
+                            </div>
+                            <div class="btn-container">
+                                <p>B</p>
+                                <button class="seat-num btn">B1</button>
+                                <button class="seat-num btn">B2</button>
+                            </div>
+                            <div class="btn-container">
+                                <p>C</p>
+                                <button class="seat-num btn">C1</button>
+                                <button class="seat-num btn">C2</button>
+                            </div>
+                            <div class="btn-container">
+                                <p>D</p>
+                                <button class="seat-num btn">D1</button>
+                                <button class="seat-num btn">D2</button>
+                            </div>
+                            <div class="btn-container">
+                                <p>E</p>
+                                <button class="seat-num btn">E1</button>
+                                <button class="seat-num btn">E2</button>
+                            </div>
+                            <div class="btn-container">
+                                <p>F</p>
+                                <button class="seat-num btn">F1</button>
+                                <button class="seat-num btn">F2</button>
+                            </div>
+                            <div class="btn-container">
+                                <p>G</p>
+                                <button class="seat-num btn">G1</button>
+                                <button class="seat-num btn">G2</button>
+                            </div>
+                            <div class="btn-container">
+                                <p>H</p>
+                                <button class="seat-num btn">H1</button>
+                                <button class="seat-num btn">H2</button>
+                            </div>
+                            <div class="btn-container">
+                                <p>I</p>
+                                <button class="seat-num btn">I1</button>
+                                <button class="seat-num btn">I2</button>
+                            </div>
+                            <div class="btn-container">
+                                <p>J</p>
+                                <button class="seat-num btn">J1</button>
+                                <button class="seat-num btn">J2</button>
+                            </div>
+                        </div>
+                        <!-- right-column of seat btns -->
+                        <div class="seat-column">
+                            <div class="btn-container">
+                                <button class="seat-num btn">A3</button>
+                                <button class="seat-num btn">A4</button>
+                            </div>
+                            <div class="btn-container">
+                                <button class="seat-num btn">B3</button>
+                                <button class="seat-num btn">B4</button>
+                            </div>
+                            <div class="btn-container">
+                                <button class="seat-num btn">C3</button>
+                                <button class="seat-num btn">C4</button>
+                            </div>
+                            <div class="btn-container">
+                                <button class="seat-num btn">D3</button>
+                                <button class="seat-num btn">D4</button>
+                            </div>
+                            <div class="btn-container">
+                                <button class="seat-num btn">E3</button>
+                                <button class="seat-num btn">E4</button>
+                            </div>
+                            <div class="btn-container">
+                                <button class="seat-num btn">F3</button>
+                                <button class="seat-num btn">F4</button>
+                            </div>
+                            <div class="btn-container">
+                                <button class="seat-num btn">G3</button>
+                                <button class="seat-num btn">G4</button>
+                            </div>
+                            <div class="btn-container">
+                                <button class="seat-num btn">H3</button>
+                                <button class="seat-num btn">H4</button>
+                            </div>
+                            <div class="btn-container">
+                                <button class="seat-num btn">I3</button>
+                                <button class="seat-num btn">I4</button>
+                            </div>
+                            <div class="btn-container">
+                                <button class="seat-num btn">J3</button>
+                                <button class="seat-num btn">J4</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="btn-container">
-                        <button class="seat-num btn">C3</button>
-                        <button class="seat-num btn">C4</button>
+                </div>
+                <!-- right side -->
+                <div class="w-full md:w-2/5 px-8 space-y-4">
+                    <h3 class="text-2xl font-bold">Select Your Seat</h3>
+                    <hr>
+                    <!-- total hisab hobe ekhane -->
+                    <div class="space-y-4 rounded-xl bg-[#e0e0e0ba] box-border p-8">
+                        <!-- total hisab hobe ekhane -->
+                        <div class="flex justify-between">
+                            <p class="font-bold">seat <span class="badge green" id="seat">0</span></p>
+                            <p class="font-bold">class</p>
+                            <p class="font-bold">Price</p>
+                        </div>
+                        <!-- sobai ekhane joma hobe -->
+                        <div class="selected-seat-container flex justify-between">
+
+                        </div>
+                        <hr>
+                        <!-- Total price -->
+                        <div class="flex justify-between">
+                            <p class="font-bold">Total Price</p>
+                            <p class="font-bold"><span>BDT </span><span class="total-price">00</span></p>
+                        </div>
+                        <!-- coupon container-->
+                        <div class=""></div>
+                        <!-- grand Total -->
+                        <div class="flex justify-between">
+                            <p class="font-bold">Grand Total</p>
+                            <p class="font-bold"><span>BDT </span><span class="grand-total">00</span></p>
+                        </div>
                     </div>
-                    <div class="btn-container">
-                        <button class="seat-num btn">D3</button>
-                        <button class="seat-num btn">D4</button>
-                    </div>
-                    <div class="btn-container">
-                        <button class="seat-num btn">E3</button>
-                        <button class="seat-num btn">E4</button>
-                    </div>
-                    <div class="btn-container">
-                        <button class="seat-num btn">F3</button>
-                        <button class="seat-num btn">F4</button>
-                    </div>
-                    <div class="btn-container">
-                        <button class="seat-num btn">G3</button>
-                        <button class="seat-num btn">G4</button>
-                    </div>
-                    <div class="btn-container">
-                        <button class="seat-num btn">H3</button>
-                        <button class="seat-num btn">H4</button>
-                    </div>
-                    <div class="btn-container">
-                        <button class="seat-num btn">I3</button>
-                        <button class="seat-num btn">I4</button>
-                    </div>
-                    <div class="btn-container">
-                        <button class="seat-num btn">J3</button>
-                        <button class="seat-num btn">J4</button>
+                    <hr>
+                    <div class="space-y-6">
+                        <div>
+                            <p class="font-bold">Passenger Name*</p>
+                            <input type="text" placeholder="Enter your name" class="input input-bordered w-full" />
+                        </div>
+                        <div>
+                            <p class="font-bold">Phone Number*</p>
+                            <input type="number" placeholder="Enter your phone number"
+                                class="input input-bordered w-full" />
+                        </div>
+                        <div>
+                            <p class="font-bold">Email ID</p>
+                            <input type="email" placeholder="Enter your email id" class="input input-bordered w-full" />
+                        </div>
+                        <button class="btn btn-primary btn-block green py-7">Next</button>
+                        <br>
+                        <div class="flex justify-between">
+                            <p><a href="#">Terms and Conditions</a></p>
+                            <p><a href="#">Cancellation Policy</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -225,7 +353,7 @@
     </main>
     <footer class="footer footer-center p-10 bg-[#030712] text-base-content rounded text-white">
         <nav class="">
-            <h3 class="font-bold text-4xl text-center">MITAS-tickets</h3>
+            <h3 class="font-bold text-4xl text-center">MITAS-ticket</h3>
             <div>P-Ticket is a digital platform to make your daily commuting better.</div>
         </nav>
         <nav>
@@ -236,7 +364,7 @@
         </aside>
     </footer>
 
-    <script src="controlHtml.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
