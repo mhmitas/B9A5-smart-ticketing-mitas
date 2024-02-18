@@ -1,6 +1,4 @@
 
-const ticketPrice = 500;
-
 const seatBtns = document.getElementsByClassName('seat-num')
 for (const seatbtn of seatBtns) {
     seatbtn.addEventListener('click', function (e) {
@@ -18,27 +16,20 @@ for (const seatbtn of seatBtns) {
         const updatedSeatsLeft = seatsLeft - 1;
         setInnerValue('seats-left', updatedSeatsLeft)
 
-        const btnTxt = e.target.innerText
-
+        
         // send seat data to total container 
+        const btnTxt = e.target.innerText;
         sendDataToSeatContainer(btnTxt)
+
+        // makeTotal
+
     })
 }
 
 
 // --Utility--
 
-function getInnerValue(id) {
-    const elementString = document.getElementById(id).innerText;
-    const value = parseInt(elementString)
-    return value;
-}
-
-function setInnerValue(id, value) {
-    const element = document.getElementById(id)
-    element.innerText = value
-}
-
+// send Data To Seat Container
 function sendDataToSeatContainer(text) {
     const seatNameContainer = document.getElementById('seat-name-container')
     const seatName = document.createElement('div')
@@ -53,6 +44,20 @@ function sendDataToSeatContainer(text) {
     // seat-price-container
     const seatPriceContainer = document.getElementById('seat-price-container')
     const seatPrice = document.createElement('div')
-    seatPrice.innerText = ticketPrice;
+    const ticketPrice = getInnerValue('ticket-price')
+    console.log(ticketPrice)
+    seatPrice.innerText = getInnerValue('ticket-price');
     seatPriceContainer.appendChild(seatPrice)
+}
+
+
+function getInnerValue(id) {
+    const elementString = document.getElementById(id).innerText;
+    const value = parseInt(elementString)
+    return value;
+}
+
+function setInnerValue(id, value) {
+    const element = document.getElementById(id)
+    element.innerText = value
 }
