@@ -1,9 +1,6 @@
-const leftColumn = document.getElementById('left-column').childNodes
-// for (const row of leftColumn) {
-//     // row.childNodes[3].style.backgroundColor = 'green'
-//     console.log(row.childNodes[1])
-// }
+const leftColumn = document.getElementById('left-column')
+console.log(leftColumn.childNodes)
 
-
-const container = document.querySelector('.same-btn-container')
-console.log(container.childNodes[3])
+for (const div of leftColumn.childNodes){
+    console.log(div)
+}
