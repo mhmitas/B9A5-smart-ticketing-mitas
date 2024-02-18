@@ -12,20 +12,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <!--  -->
+    <!-- inter-font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: "Raleway", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-            max-width: 1440px;
-        }
-    </style>
 </head>
 
 <body class="container mx-auto">
@@ -176,7 +167,7 @@
             </div>
         </section>
         <!-- Select Your Seat section-->
-        <section class="bg-[#F7F8F8] py-8 rounded-xl">
+        <section class="bg-[#F7F8F8] py-8 rounded-xl inter-font">
             <div class="flex flex-col-reverse md:flex-row mb-28">
                 <!-- left side -->
                 <div class=" w-full md:w-3/5 px-16">
@@ -301,16 +292,18 @@
                     <hr>
                     <!-- total hisab hobe ekhane -->
                     <div class="space-y-4 rounded-xl bg-[#e0e0e0ba] box-border p-8">
-                        <!-- total hisab hobe ekhane -->
                         <div class="flex justify-between">
-                            <div id="seat-name-container" class="font-bold">
-                                <div>seat <span class="badge green" id="seat">0</span></div>
+                            <!-- seat-name-container -->
+                            <div id="seat-name-container" class="">
+                                <div class="font-bold mb-2">seat <span class="badge green" id="seat">0</span></div>
                             </div>
-                            <div id="seat-class-container" class="font-bold">
-                                <p>Class</p>
+                            <!-- seat-class-container -->
+                            <div id="seat-class-container" class="">
+                                <p class="font-bold mb-2">Class</p>
                             </div>
-                            <div id="seat-price-container" class="font-bold">
-                                <p>Price</p>
+                            <!-- seat-price-container -->
+                            <div id="seat-price-container" class="">
+                                <p class="font-bold mb-2">Price</p>
                             </div>
                         </div>
                         <hr>
