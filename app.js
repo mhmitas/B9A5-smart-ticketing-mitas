@@ -57,7 +57,7 @@ function sendDataToSeatContainer(text) {
 }
 
 
-//  make total
+//  make total function
 function makeTotal(price) {
     const total = getInnerValue('total-price')
     const sum = total + price;
@@ -70,11 +70,23 @@ function makeTotal(price) {
 function applyCouponButton() {
     const couponCode = applyCoupon()
     grandTotal(couponCode)
-
+    // faltu kaj-
+    if (couponCode !== 'NEW15' && couponCode !== 'Couple 20') {
+        document.getElementById('wrong-coupon').innerText = '!Wrong coupon'
+    } else {
+        document.getElementById('wrong-coupon').innerText = '';
+    }
 }
-// take from input
+// take data from input
 function applyCoupon() {
     const coupon = document.getElementById('coupon').value;
+    const applyCouponBtn = document.getElementById('apply-coupon-btn')
+    if (coupon.length > 0) {
+        applyCouponBtn.removeAttribute('disabled');
+    }
+    else {
+        applyCouponBtn.setAttribute('disabled', true);
+    }
     return coupon;
 }
 

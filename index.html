@@ -69,7 +69,7 @@
                         <h1 class="mb-5 text-4xl font-bold">MITAS Paribahan</h1>
                         <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
                             exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <a href="#scroll" class="btn btn-primary green">Buy Ticket</a>
+                        <a href="#scroll" class="btn btn-success green">Buy Ticket</a>
                     </div>
                 </div>
             </div>
@@ -314,13 +314,14 @@
                             <p class="font-bold"><span>BDT </span><span id="total-price">0</span></p>
                         </div>
                         <!-- coupon container-->
-                        <div class="">
+                        <div class="coupon-container">
                             <div class="join">
                                 <input type="text" id="coupon" onkeyup="applyCoupon()" placeholder="Have any copupon?"
                                     class="input join-item w-3/4 lg:w-full" />
-                                <button id="apply-coupon-btn" class="btn btn-success join-item green"
+                                <button id="apply-coupon-btn" disabled class="btn btn-success join-item green"
                                     onclick="applyCouponButton()">Apply</button>
                             </div>
+                            <p id="wrong-coupon" class=" text-red-600"></p>
                         </div>
                         <!-- grand Total -->
                         <div class="flex justify-between">
@@ -356,7 +357,7 @@
                                 <div class="modal-action justify-center">
                                     <form method="dialog" class="">
                                         <!-- if there is a button in form, it will close the modal -->
-                                        <button class="btn green btn-wide btn-success">Close</button>
+                                        <button class="btn green btn-wide btn-success">Ok</button>
                                     </form>
                                 </div>
                             </div>
@@ -375,7 +376,7 @@
     <footer class="footer footer-center p-10 bg-[#030712] text-base-content rounded text-white">
         <nav class="">
             <h3 class="font-bold text-4xl text-center">MITAS-ticket</h3>
-            <div>P-Ticket is a digital platform to make your daily commuting better.</div>
+            <div>MITAS-ticket is a digital platform to make your daily commuting better.</div>
         </nav>
         <nav>
             <img src="images/playstore2.png" alt="">
