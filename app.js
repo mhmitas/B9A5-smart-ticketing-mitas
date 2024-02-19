@@ -1,5 +1,11 @@
-// const isLeader = true;
-document.getElementById('phone-num')
+
+// work with Next Button
+const nextBtn = document.getElementById('next-btn')
+
+const inputField = document.getElementById('phone-num')
+inputField.addEventListener('keyup', function (event) {
+    console.log(event.target.value)
+})
 
 
 
@@ -39,7 +45,7 @@ for (const seatbtn of seatBtns) {
         makeTotal(ticketPrice)
 
         
-        if (getInnerValue('seat') > 0 && isLeader) {
+        if (getInnerValue('seat') > 0) {
             nextBtn.removeAttribute('disabled')
         }
 
@@ -74,14 +80,6 @@ function sendDataToSeatContainer(text) {
 }
 
 
-// work with Next Button
-
-console.log()
-
-const inputField = document.getElementById('phone-num')
-inputField.addEventListener('keyup', function (event) {
-    console.log(event.target.value)
-})
 
 
 
