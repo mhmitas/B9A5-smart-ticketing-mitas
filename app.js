@@ -108,6 +108,8 @@ function grandTotal(parameter) {
         // --
         setInnerValue('discount-text', 'Discount')
         setInnerValue('discount-amount', `BDT ${discount}`)
+        // --
+        document.getElementById('gayebul-haowa').style.display = "none"
     } else {
         setInnerValue('grand-total', total)
     }
