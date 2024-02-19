@@ -38,9 +38,10 @@ for (const seatbtn of seatBtns) {
         makeTotal(ticketPrice)
 
 
-        if (getInnerValue('seat') > 0) {
-            nextBtn.removeAttribute('disabled')
-        }
+        // if (getInnerValue('seat') > 0) {
+        //     nextBtn.removeAttribute('disabled')
+        // }
+
 
     })
 }
@@ -73,14 +74,14 @@ function sendDataToSeatContainer(text) {
 }
 
 
-// let inputFieldLength = 0;
-// document.getElementById('phone-num').addEventListener('keyup', function (event) {
-//     inputFieldLength = event.target.value.length;
-//     console.log('inputFieldLength', inputFieldLength)
-//     if(inputFieldLength < 6){
-//         nextBtn.setAttribute('disabled', true)
-//     }
-// })
+
+document.getElementById('phone-num').addEventListener('keyup', function (event) {
+    const inputValueLength = event.target.value.length;
+    console.log('inputValueLength', inputValueLength)
+    if(inputValueLength >= 6 && isLeader){
+        nextBtn.removeAttribute('disabled')
+    }
+})
 
 
 // --> Utility ------------------------------------>
