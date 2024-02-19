@@ -32,6 +32,10 @@ for (const seatbtn of seatBtns) {
         const ticketPrice = getInnerValue('ticket-price')
         makeTotal(ticketPrice)
 
+        if (getInnerValue('seat') > 0) {
+            nextBtn.removeAttribute('disabled')
+        }
+
     })
 }
 
@@ -63,7 +67,23 @@ function sendDataToSeatContainer(text) {
 }
 
 
-// --Utility--
+// work with Next Button
+const nextBtn = document.getElementById('next-btn')
+// if(getInnerValue('seat')){
+//     nextBtn.removeAttribute('disabled')
+//     // nextBtn.removeAttribute('disabled')
+// }
+
+console.log()
+
+const inputField = document.getElementById('phone-num')
+inputField.addEventListener('keyup', function (event) {
+    console.log(event.target.value)
+})
+
+
+
+// --> Utility ------------------------------------>
 
 
 function getInnerValue(id) {
