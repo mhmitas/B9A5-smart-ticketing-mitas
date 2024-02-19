@@ -5,6 +5,12 @@ const seatBtns = document.getElementsByClassName('seat-num')
 for (const seatbtn of seatBtns) {
     seatbtn.addEventListener('click', function (e) {
 
+        //stops the execution of a function
+        if (getInnerValue('seat') === 4) {
+            alert('You cannot select more than 4 tickets')
+            return;
+        }
+
         // set bg of clicked btn
         e.target.style.backgroundColor = '#2eb82e';
         e.target.style.color = '#ffffff';
@@ -62,7 +68,7 @@ function makeTotal(price) {
 }
 
 
-// input data collect by apply button fron coupon input field:
+// input data collect by apply button from coupon input field:
 function applyCouponButton() {
     const couponCode = applyCoupon()
     grandTotal(couponCode)
@@ -76,15 +82,26 @@ function applyCouponButton() {
 // take data from input
 function applyCoupon() {
     const coupon = document.getElementById('coupon').value;
-    const applyCouponBtn = document.getElementById('apply-coupon-btn')
-    if (coupon.length > 0) {
-        applyCouponBtn.removeAttribute('disabled');
-    }
-    else {
-        applyCouponBtn.setAttribute('disabled', true);
-    }
+
+
     return coupon;
 }
+
+
+// function applyCoupon() {
+//     const coupon = document.getElementById('coupon').value;
+//     const seatNum = getInnerValue('seat')
+//     const applyCouponBtn = document.getElementById('apply-coupon-btn')
+//     if (seatNum === 4) {
+//         applyCouponBtn.removeAttribute('disabled');
+//     }
+//     else {
+//         applyCouponBtn.setAttribute('disabled', true);
+//     }
+//     return coupon;
+// }
+
+
 
 // ? work with coupon ---grand total----------
 function grandTotal(parameter) {
@@ -100,20 +117,9 @@ function grandTotal(parameter) {
     }
 }
 
-//  *****************************************************************************************
-// work with Next Button
-// const nextBtn = document.getElementById('next-btn')
-// document.getElementById('phone-num').addEventListener('keyup', function (event) {
-//     const inputValueLength = event.target.value.length;
-//     const seatNum = getInnerValue('seat')
-//     if (inputValueLength >= 4 && seatNum > 0) {
-//         nextBtn.removeAttribute('disabled')
-//     } else {
-//         nextBtn.setAttribute('disabled', true)
-//     }
-// })
 
-// work with Next Button
+
+// work with Next Button :-------------------->>
 const nextBtn = document.getElementById('next-btn')
 function phoneNumberControl() {
     const phoneNum = document.getElementById('phone-num').value;
@@ -124,6 +130,14 @@ function phoneNumberControl() {
     } else {
         nextBtn.setAttribute('disabled', true)
     }
+    const applyCouponBtn = document.getElementById('apply-coupon-btn');
+    if (seatNum === 4) {
+        applyCouponBtn.removeAttribute('disabled');
+    }
+    else {
+        applyCouponBtn.setAttribute('disabled', true);
+    }
+
 }
 
 
