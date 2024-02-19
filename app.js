@@ -1,7 +1,4 @@
 
-// work with Next Button
-const nextBtn = document.getElementById('next-btn')
-
 
 // button selection part..........
 const seatBtns = document.getElementsByClassName('seat-num')
@@ -10,7 +7,7 @@ for (const seatbtn of seatBtns) {
 
         //stops the execution of a function
         if (getInnerValue('seat') === 4) {
-            alert('You cannot select mare than 4 tickets')
+            alert('You cannot select more than 4 tickets')
             return;
         }
 
@@ -37,11 +34,7 @@ for (const seatbtn of seatBtns) {
         const ticketPrice = getInnerValue('ticket-price')
         makeTotal(ticketPrice)
 
-
-        // if (getInnerValue('seat') > 0) {
-        //     nextBtn.removeAttribute('disabled')
-        // }
-
+        grandTotal('hello')
 
     })
 }
@@ -51,6 +44,13 @@ function makeTotal(price) {
     const total = getInnerValue('total-price')
     const sum = total + price;
     setInnerValue('total-price', sum)
+}
+
+function grandTotal(coupon){
+    const total = getInnerValue('total-price')
+    if(coupon === 'NEW15'){
+        setInnerValue('grand-total', 'jorimmana lagbe')
+    }
 }
 
 
@@ -75,11 +75,16 @@ function sendDataToSeatContainer(text) {
 
 
 
+// work with Next Button
+const nextBtn = document.getElementById('next-btn')
+
 document.getElementById('phone-num').addEventListener('keyup', function (event) {
     const inputValueLength = event.target.value.length;
-    console.log('inputValueLength', inputValueLength)
-    if(inputValueLength >= 6 && isLeader){
+    const seatNum = getInnerValue('seat')
+    if (inputValueLength >= 6 && seatNum > 0) {
         nextBtn.removeAttribute('disabled')
+    } else{
+        nextBtn.setAttribute('disabled', true)
     }
 })
 
