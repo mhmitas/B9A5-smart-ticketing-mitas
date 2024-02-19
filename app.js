@@ -33,28 +33,7 @@ for (const seatbtn of seatBtns) {
         // make Total
         const ticketPrice = getInnerValue('ticket-price')
         makeTotal(ticketPrice)
-
-        grandTotal('hello')
-
     })
-}
-
-
-function makeTotal(price) {
-    const total = getInnerValue('total-price')
-    const sum = total + price;
-    setInnerValue('total-price', sum)
-}
-
-// ? work with coupon ----------
-function grandTotal(coupon){
-    const total = getInnerValue('total-price')
-    const couponCode =
-    if(coupon === 'NEW15'){
-        setInnerValue('grand-total', 'jorimmana lagbe')
-    }else{
-        setInnerValue('grand-total',total)
-    }
 }
 
 
@@ -78,6 +57,41 @@ function sendDataToSeatContainer(text) {
 }
 
 
+//  make total
+function makeTotal(price) {
+    const total = getInnerValue('total-price')
+    const sum = total + price;
+    setInnerValue('total-price', sum)
+    grandTotal('hello')
+}
+
+
+// input data collect by apply button fron coupon input field:
+function applyCouponButton() {
+    const couponCode = applyCoupon()
+    grandTotal(couponCode)
+
+}
+// take from input
+function applyCoupon() {
+    const coupon = document.getElementById('coupon').value;
+    return coupon;
+}
+
+// ? work with coupon ---grand total----------
+function grandTotal(parameter) {
+    const total = getInnerValue('total-price')
+    if (parameter === 'NEW15') {
+        const grandTotal = total * 0.85;
+        setInnerValue('grand-total', grandTotal)
+    } else if (parameter === 'Couple 20') {
+        const grandTotal = total * 0.80;
+        setInnerValue('grand-total', grandTotal)
+    } else {
+        setInnerValue('grand-total', total)
+    }
+}
+
 
 // work with Next Button
 const nextBtn = document.getElementById('next-btn')
@@ -86,22 +100,11 @@ document.getElementById('phone-num').addEventListener('keyup', function (event) 
     const seatNum = getInnerValue('seat')
     if (inputValueLength >= 6 && seatNum > 0) {
         nextBtn.removeAttribute('disabled')
-    } else{
+    } else {
         nextBtn.setAttribute('disabled', true)
     }
 })
 
-
-// input data collect via apply button :
-function applyCouponButton(){
-    const couponCode = applyCoupon() 
-    console.log(couponCode)
-    return couponCode;
-}
-function applyCoupon(){
-    const coupon = document.getElementById('coupon').value;
-    return coupon;
-}
 
 
 

@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="container mx-auto">
+<body class="container mx-auto p-1">
     <header class="lg:mx-32">
         <nav class="my-3">
             <div class="navbar bg-base-100">
@@ -121,8 +121,8 @@
                     allow for a streamlined .</p>
             </div>
             <!-- bogura box -->
-            <div class="flex  justify-between">
-                <div class="md:w-3/4 space-y-3">
+            <div class="flex flex-col lg:flex-row justify-between gap-4">
+                <div class="lg::w-3/4 space-y-3">
                     <!-- MITAS Paribahan -->
                     <div class="flex justify-between">
                         <div class="flex gap-4">
@@ -316,8 +316,9 @@
                         <div class="">
                             <div class="join">
                                 <input type="text" id="coupon" onkeyup="applyCoupon()" placeholder="Have any copupon?"
-                                    class="input join-item" />
-                                <button class="btn btn-success join-item green" onclick="applyCouponButton()">Apply</button>
+                                    class="input join-item w-3/4 lg:w-full" />
+                                <button id="apply-coupon-btn" class="btn btn-success join-item green"
+                                    onclick="applyCouponButton()">Apply</button>
                             </div>
                         </div>
                         <!-- grand Total -->
@@ -341,7 +342,22 @@
                             <p class="font-bold">Email ID</p>
                             <input type="email" placeholder="Enter your email id" class="input input-bordered w-full" />
                         </div>
-                        <button id="next-btn" class="btn btn-primary btn-block green py-7" disabled>Next</button>
+                        <button id="next-btn" class="btn btn-primary btn-block green py-7" disabled onclick="my_modal_4.showModal()">Next</button>
+                        <!--  -->
+                        <!-- You can open the modal using ID.showModal() method -->
+                        <dialog id="my_modal_4" class="modal">
+                            <div class="modal-box w-11/12 max-w-5xl">
+                                <h3 class="font-bold text-lg">Hello!</h3>
+                                <p class="py-4">Click the button below to close</p>
+                                <div class="modal-action">
+                                    <form method="dialog">
+                                        <!-- if there is a button, it will close the modal -->
+                                        <button class="btn">Close</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
+                        <!--  -->
                         <br>
                         <div class="flex justify-between">
                             <p><a href="#">Terms and Conditions</a></p>
