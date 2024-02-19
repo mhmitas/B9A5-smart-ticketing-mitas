@@ -1,4 +1,10 @@
+// const isLeader = true;
+document.getElementById('phone-num')
 
+
+
+
+// button selection part..........
 const seatBtns = document.getElementsByClassName('seat-num')
 for (const seatbtn of seatBtns) {
     seatbtn.addEventListener('click', function (e) {
@@ -32,7 +38,8 @@ for (const seatbtn of seatBtns) {
         const ticketPrice = getInnerValue('ticket-price')
         makeTotal(ticketPrice)
 
-        if (getInnerValue('seat') > 0) {
+        
+        if (getInnerValue('seat') > 0 && isLeader) {
             nextBtn.removeAttribute('disabled')
         }
 
@@ -68,11 +75,6 @@ function sendDataToSeatContainer(text) {
 
 
 // work with Next Button
-const nextBtn = document.getElementById('next-btn')
-// if(getInnerValue('seat')){
-//     nextBtn.removeAttribute('disabled')
-//     // nextBtn.removeAttribute('disabled')
-// }
 
 console.log()
 
