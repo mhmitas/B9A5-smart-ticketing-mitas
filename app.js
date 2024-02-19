@@ -89,6 +89,13 @@ document.getElementById('phone-num').addEventListener('keyup', function (event) 
 })
 
 
+
+function applyCoupon(){
+    
+}
+
+
+
 // --> Utility ------------------------------------>
 
 
