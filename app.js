@@ -98,7 +98,7 @@ const nextBtn = document.getElementById('next-btn')
 document.getElementById('phone-num').addEventListener('keyup', function (event) {
     const inputValueLength = event.target.value.length;
     const seatNum = getInnerValue('seat')
-    if (inputValueLength >= 6 && seatNum > 0) {
+    if (inputValueLength >= 4 && seatNum > 0) {
         nextBtn.removeAttribute('disabled')
     } else {
         nextBtn.setAttribute('disabled', true)
