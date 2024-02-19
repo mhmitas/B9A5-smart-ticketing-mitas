@@ -50,6 +50,8 @@ function grandTotal(coupon){
     const total = getInnerValue('total-price')
     if(coupon === 'NEW15'){
         setInnerValue('grand-total', 'jorimmana lagbe')
+    }else{
+        setInnerValue('grand-total',total)
     }
 }
 
@@ -77,7 +79,6 @@ function sendDataToSeatContainer(text) {
 
 // work with Next Button
 const nextBtn = document.getElementById('next-btn')
-
 document.getElementById('phone-num').addEventListener('keyup', function (event) {
     const inputValueLength = event.target.value.length;
     const seatNum = getInnerValue('seat')
@@ -89,9 +90,15 @@ document.getElementById('phone-num').addEventListener('keyup', function (event) 
 })
 
 
-
+// input data collect via apply button :
+function applyCouponButton(){
+    const couponText = applyCoupon() 
+    console.log(couponText)
+    return couponText;
+}
 function applyCoupon(){
-    
+    const coupon = document.getElementById('coupon').value
+    return coupon;
 }
 
 
