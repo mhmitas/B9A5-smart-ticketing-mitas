@@ -46,8 +46,10 @@ function makeTotal(price) {
     setInnerValue('total-price', sum)
 }
 
+// ? work with coupon ----------
 function grandTotal(coupon){
     const total = getInnerValue('total-price')
+    const couponCode =
     if(coupon === 'NEW15'){
         setInnerValue('grand-total', 'jorimmana lagbe')
     }else{
@@ -92,12 +94,12 @@ document.getElementById('phone-num').addEventListener('keyup', function (event) 
 
 // input data collect via apply button :
 function applyCouponButton(){
-    const couponText = applyCoupon() 
-    console.log(couponText)
-    return couponText;
+    const couponCode = applyCoupon() 
+    console.log(couponCode)
+    return couponCode;
 }
 function applyCoupon(){
-    const coupon = document.getElementById('coupon').value
+    const coupon = document.getElementById('coupon').value;
     return coupon;
 }
 
