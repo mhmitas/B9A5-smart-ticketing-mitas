@@ -5,12 +5,6 @@ const seatBtns = document.getElementsByClassName('seat-num')
 for (const seatbtn of seatBtns) {
     seatbtn.addEventListener('click', function (e) {
 
-        //stops the execution of a function
-        if (getInnerValue('seat') === 4) {
-            alert('You cannot select more than 4 tickets')
-            return;
-        }
-
         // set bg of clicked btn
         e.target.style.backgroundColor = '#2eb82e';
         e.target.style.color = '#ffffff';
@@ -33,6 +27,8 @@ for (const seatbtn of seatBtns) {
         // make Total
         const ticketPrice = getInnerValue('ticket-price')
         makeTotal(ticketPrice)
+
+        phoneNumberControl()
     })
 }
 
@@ -104,18 +100,34 @@ function grandTotal(parameter) {
     }
 }
 
+//  *****************************************************************************************
+// work with Next Button
+// const nextBtn = document.getElementById('next-btn')
+// document.getElementById('phone-num').addEventListener('keyup', function (event) {
+//     const inputValueLength = event.target.value.length;
+//     const seatNum = getInnerValue('seat')
+//     if (inputValueLength >= 4 && seatNum > 0) {
+//         nextBtn.removeAttribute('disabled')
+//     } else {
+//         nextBtn.setAttribute('disabled', true)
+//     }
+// })
 
 // work with Next Button
 const nextBtn = document.getElementById('next-btn')
-document.getElementById('phone-num').addEventListener('keyup', function (event) {
-    const inputValueLength = event.target.value.length;
+function phoneNumberControl() {
+    const phoneNum = document.getElementById('phone-num').value;
+    console.log(phoneNum.length)
     const seatNum = getInnerValue('seat')
-    if (inputValueLength >= 4 && seatNum > 0) {
+    if (phoneNum.length >= 4 && seatNum > 0) {
         nextBtn.removeAttribute('disabled')
     } else {
         nextBtn.setAttribute('disabled', true)
     }
-})
+}
+
+
+
 
 
 
