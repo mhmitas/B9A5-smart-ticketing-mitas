@@ -315,13 +315,18 @@
                         </div>
                         <!-- coupon container-->
                         <div class="coupon-container">
-                            <div class="join">
+                            <div class="join" id="gayebul-haowa">
                                 <input type="text" id="coupon" onkeyup="applyCoupon()" placeholder="Have any copupon?"
                                     class="input join-item w-3/4 lg:w-full" />
                                 <button id="apply-coupon-btn" disabled class="btn btn-success join-item green"
                                     onclick="applyCouponButton()">Apply</button>
                             </div>
                             <p id="wrong-coupon" class=" text-red-600"></p>
+                        </div>
+                        <!-- discount amount  -->
+                        <div id="discount-amount-container" class="font-bold flex justify-between">
+                            <p id="discount-text"></p>
+                            <p><span id="discount-amount"></span></p>
                         </div>
                         <!-- grand Total -->
                         <div class="flex justify-between">
@@ -337,8 +342,8 @@
                         </div>
                         <div>
                             <p class="font-bold">Phone Number*</p>
-                            <input type="number" id="phone-num" onkeyup="phoneNumberControl()" placeholder="Enter your phone number"
-                                class="input input-bordered w-full" />
+                            <input type="number" id="phone-num" onkeyup="phoneNumberControl()"
+                                placeholder="Enter your phone number" class="input input-bordered w-full" />
                         </div>
                         <div>
                             <p class="font-bold">Email ID</p>
@@ -353,7 +358,7 @@
                                 <h3 class="font-bold text-lg text-green-600 text-center py-2">Success</h3>
                                 <p class="py-2 text-center">Thank you for Booking Our Bus Seats. <br>
                                     We are working hard to find the best service and deals for you.</p>
-                                    <p class="py-2 text-center"></p>
+                                <p class="py-2 text-center"></p>
                                 <div class="modal-action justify-center">
                                     <form method="dialog" class="">
                                         <!-- if there is a button in form, it will close the modal -->

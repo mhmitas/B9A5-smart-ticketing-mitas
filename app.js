@@ -88,30 +88,26 @@ function applyCoupon() {
 }
 
 
-// function applyCoupon() {
-//     const coupon = document.getElementById('coupon').value;
-//     const seatNum = getInnerValue('seat')
-//     const applyCouponBtn = document.getElementById('apply-coupon-btn')
-//     if (seatNum === 4) {
-//         applyCouponBtn.removeAttribute('disabled');
-//     }
-//     else {
-//         applyCouponBtn.setAttribute('disabled', true);
-//     }
-//     return coupon;
-// }
-
-
 
 // ? work with coupon ---grand total----------
 function grandTotal(parameter) {
     const total = getInnerValue('total-price')
     if (parameter === 'NEW15') {
-        const grandTotal = total * 0.85;
+        const discount = total * 0.15;
+        const grandTotal = total - discount;
         setInnerValue('grand-total', grandTotal)
+        // --
+        setInnerValue('discount-text', 'Discount')
+        setInnerValue('discount-amount', `BDT ${discount}`)
+        // --
+        document.getElementById('gayebul-haowa').style.display = "none"
     } else if (parameter === 'Couple 20') {
-        const grandTotal = total * 0.80;
+        const discount = total * 0.20;
+        const grandTotal = total - discount;
         setInnerValue('grand-total', grandTotal)
+        // --
+        setInnerValue('discount-text', 'Discount')
+        setInnerValue('discount-amount', `BDT ${discount}`)
     } else {
         setInnerValue('grand-total', total)
     }
