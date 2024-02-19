@@ -2,13 +2,6 @@
 // work with Next Button
 const nextBtn = document.getElementById('next-btn')
 
-const inputField = document.getElementById('phone-num')
-inputField.addEventListener('keyup', function (event) {
-    console.log(event.target.value)
-})
-
-
-
 
 // button selection part..........
 const seatBtns = document.getElementsByClassName('seat-num')
@@ -44,7 +37,7 @@ for (const seatbtn of seatBtns) {
         const ticketPrice = getInnerValue('ticket-price')
         makeTotal(ticketPrice)
 
-        
+
         if (getInnerValue('seat') > 0) {
             nextBtn.removeAttribute('disabled')
         }
@@ -80,7 +73,14 @@ function sendDataToSeatContainer(text) {
 }
 
 
-
+// let inputFieldLength = 0;
+// document.getElementById('phone-num').addEventListener('keyup', function (event) {
+//     inputFieldLength = event.target.value.length;
+//     console.log('inputFieldLength', inputFieldLength)
+//     if(inputFieldLength < 6){
+//         nextBtn.setAttribute('disabled', true)
+//     }
+// })
 
 
 // --> Utility ------------------------------------>
