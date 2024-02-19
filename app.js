@@ -36,9 +36,12 @@ for (const seatbtn of seatBtns) {
 }
 
 
+function makeTotal(price) {
+    const total = getInnerValue('total-price')
+    const sum = total + price;
+    setInnerValue('total-price', sum)
+}
 
-
-// --Utility--
 
 // send Data To Seat Container
 function sendDataToSeatContainer(text) {
@@ -60,15 +63,7 @@ function sendDataToSeatContainer(text) {
 }
 
 
-function makeTotal(price) {
-    const total = getInnerValue('total-price')
-    const sum = total + price;
-    setInnerValue('total-price', sum)
-}
-
-
-
-// console.log(document.getElementById('phone-num').value)
+// --Utility--
 
 
 function getInnerValue(id) {
